@@ -25,7 +25,6 @@ public class GoldManager : SingletonDestroyMono<GoldManager>
     {
         _currentGold += amount;
 
-        // Altýn miktarý deðiþtiðinde olayý tetikler
         OnGoldChanged?.Invoke(_currentGold);
     }
 
@@ -35,7 +34,6 @@ public class GoldManager : SingletonDestroyMono<GoldManager>
         {
             _currentGold -= amount;
 
-            // Altýn miktarý deðiþtiðinde olayý tetikler
             OnGoldChanged?.Invoke(_currentGold);
         }
 
@@ -50,7 +48,6 @@ public class GoldManager : SingletonDestroyMono<GoldManager>
     {
         _currentGold = 0;
 
-        // Altýn miktarý deðiþtiðinde olayý tetikler
         OnGoldChanged?.Invoke(_currentGold);
     }
 }
